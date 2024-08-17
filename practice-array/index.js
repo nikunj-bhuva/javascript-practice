@@ -8,7 +8,7 @@
 // let persons = new Array("nikunj", "dip", "karan", "ashish", "chinku");
 // console.log(persons);
 
-// array literals 
+// array literals
 
 // let persons = ["nikunj", "dip", "karan", "ashish", "chinku"];
 // console.log(persons[1]);
@@ -197,7 +197,7 @@
 //     if (ele % 2 === 0) {
 //         return ele * 2;
 //     }
-// }).filter((ele) => {
+// }).filter((ele) => {9
 //     return ele !== undefined;
 // })
 // console.log(evenSquare);
@@ -212,4 +212,232 @@
 // let totalPrice = numbers.reduce((accum, ele, idx, arr) => {
 //     return accum + ele;
 // }, 0)
+// console.log(totalPrice);
+
+// array create using constructor //
+
+// const arr = new Array("nikunj", "mohit", "vishal");
+// console.log(arr.at(-1));
+
+// array create using array literals //
+
+// const fruits = ["apple", "mango", "bannna", "graphes"];
+// fruits[2] = "narangi";
+// console.log(fruits.length);
+
+// for of loop //
+
+// const fruits = ["apple", "mango", "bannna", "graphes"];
+// for (element of fruits) {
+//   console.log(element);
+// }
+
+// for in loop //
+
+// const fruits = ["apple", "mango", "bannna", "graphes"];
+// for (index in fruits) {
+//   console.log(index);
+// }
+
+// for each method //
+
+// const fruits = ["apple", "mango", "bannna", "graphes"];
+// // fruits.forEach((element, index, arr) => {
+// //   console.log(element);
+// // });
+
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+
+// practice time //
+
+// each elements multiply with two //
+
+// foreach method can not return any value //
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// const multiplyArr = arr.forEach((element) => {
+//   return element * 2;
+// });
+
+// console.log(multiplyArr);
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// // map can return any value with new array //
+
+// const multiplyArr = arr.map((ele) => {
+//   return ele * 2;
+// });
+
+// console.log(multiplyArr);
+// console.log(arr);
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// // console.log(arr.shift());
+// console.log(arr.unshift(10));
+// console.log(arr);
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// arr.pop();
+// arr.pop();
+// arr.pop();
+// console.log(arr)
+
+// const fruits = ["apple", "mango", "bannna", "graphes"];
+// console.log(fruits.splice(-1, 0, "ass"));
+// console.log(fruits);
+
+// array search methods //
+
+// const fruits = ["apple", "mango", "bannna", "apple", "graphes", "mango"];
+// // console.log(fruits.indexOf("apple",1));
+// console.log(fruits.lastIndexOf("mango",4));
+
+// const fruits = ["apple", "mango", "bannna", "apple", "graphes", "mango"];
+// console.log(fruits.includes("mango"));
+
+// todo challenge //
+
+// add december to the end of the array //
+
+// const months = ["jan", "march", "april", "july", "jun"];
+// // months.push(`december`);
+// console.log(months.splice(months.length, 0, "december"));
+// console.log(months);
+
+// const months = ["jan", "march", "april", "july", "jun"];
+// // console.log(months.splice(1, 1, "March"));
+// months[1] = "March";
+// console.log(months);
+
+// delete june from an array //
+
+// const months = ["jan", "march", "april", "july", "jun"];
+// const juneIndex = months.indexOf(`jun`);
+// if (juneIndex === 4) {
+//   console.log(months.splice(juneIndex, 1));
+// }
+// console.log(months);
+
+// const fruits = ["apple", "banna", "orange", "mango"];
+
+// fruits.push("graphes");
+// console.log(fruits.splice(1, 1));
+// console.log(fruits.unshift("pineapple"));
+// console.log(fruits.splice(0, 1));
+// console.log(fruits);
+
+// find method //
+
+// const numbers = [1, 2, 3, 4, 5, 3, 2, 8, 9];
+// debugger
+// const arr = numbers.find((element) => {
+//   debugger
+//   return element > 5;
+// });
+
+// console.log(arr);
+
+// find index method //
+
+// const arr = [2, 4, 6, 8, 10];
+// const newArr = arr.findIndex((value) => {
+//   return value > 6;
+// });
+
+// console.log(newArr);
+
+// const arr = [2, 4, 6, 8, 10];
+// const newArr = arr.findIndex((value) => value > 6);
+// console.log(newArr);
+
+// const value = 6;
+// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// debugger;
+// const newArr = numbers.filter((ele) => {
+//   debugger;
+//   return ele !== value;
+// });
+// console.log(newArr);
+// console.log(numbers);
+
+// filtering products //
+
+// const products = [
+//   { name: "laptop", price: 1200 },
+//   { name: "phone", price: 800 },
+//   { name: "tablet", price: 300 },
+//   { name: "smartwatch", price: 150 },
+// ];
+
+//using for of loop//
+
+// for (item of products) {
+//   if (item.price <= 500) {
+//     console.log(item);
+//   }
+// }
+
+// for in loop //
+
+// for (item in products) {
+//   console.log(products[item].price <= 500 ? products[item] : null);
+// }
+
+// using vanila for loop //
+
+// for (let i = 0; i < products.length; i++) {
+//   debugger
+//   products[i].price <= 500 && console.log(products[i]);
+// }
+
+// using filter method //
+
+// const filterProducts = products.filter((product) => product.price <= 500);
+
+// console.log(filterProducts);
+
+// unique values //
+
+// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// const newArr = numbers.filter(
+//   (number, index, arr) => arr.indexOf(number) === index
+// );
+
+// const numbers = [1, 4, 10, 12, 15, 18];
+// const squaredArr = numbers.map((number) => number * number);
+// console.log(squaredArr);
+
+// const persons = ["nikunj", "vishal", "het", "nikhil", "mohit", "parth"];
+
+// const stringCapitalizedArr = persons.map((name) =>
+//   name === name.toLowerCase() ? name.toUpperCase() : name.toLowerCase()
+// );
+// console.log(stringCapitalizedArr);
+
+// const numbers = [1, 43, 10, 7, 9, 18, 11, 19, 16, 14];
+// const evenNumbers = numbers
+//   .map((number) => {
+//     if (number % 2 === 0) {
+//       return number * number;
+//     }
+//   })
+//   .filter((number) => number !== undefined);
+
+// console.log(evenNumbers);
+
+// const persons = ["nikunj", "vishal", "het", "nikhil", "mohit", "parth"];
+// const newPesonsArr = persons.map((names) => `Mr.${names}`);
+// console.log(newPesonsArr);
+
+// reduce method //
+
+// const numbers = [100, 200, 300, 400, 500];
+
+// const totalPrice = numbers.reduce((accum, value) => {
+//   return accum + value;
+// }, 0);
+
 // console.log(totalPrice);
