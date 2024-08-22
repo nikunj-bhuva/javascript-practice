@@ -161,4 +161,92 @@
 // let para = document.querySelector(".para");
 // console.log(para);
 
+// get elements by id //
 
+// let firstHeading = document.getElementById("first-h1");
+// firstHeading.style.cssText =
+//   "background-color:#222; color:white; padding:10px 5px; border-radius:10px;";
+// console.log(firstHeading);
+
+// // get elements by tagName //
+
+// let para = document.getElementsByTagName("p");
+// para = Array.from(para);
+
+// para.forEach((para) => {
+//   para.innerText = "This is my editable paragraphs using dom properties.";
+//   para.style.cssText = "background-color:#222; color:white; padding:10px 5px;";
+// });
+
+// get element by classname //
+
+// let h2 = document.getElementsByClassName("second-h2");
+// h2 = Array.from(h2);
+// h2.forEach((ele) => {
+//   console.log(ele.setAttribute("class", "headings"));
+// });
+// console.log(h2);
+
+// query selector //
+
+// let h2 = document.querySelector(".second-h2");
+// h2.innerHTML = `<span>${h2.innerText}</span>`;
+// h2.style.cssText =
+//   "background-color:orange; color:white; font-size:30px; padding:5px 5px";
+// console.log(h2);
+
+// query selector all //
+
+// debugger;
+// let h2All = document.querySelectorAll(".second-h2");
+// h2All.forEach((ele) => {
+//   debugger;
+//   ele.style.cssText =
+//     "background-color:orange; color:white; font-size:30px; padding:5px 5px";
+//   console.log((ele.innerHTML = "<span>this is span tag</span>"));
+// });
+// console.log(h2All);
+
+// let parent = document.querySelector(".parent");
+// let child = parent.children;
+// child = child[0];
+// let ul = child.firstElementChild;
+// console.log(ul);
+// for (let i = 0; i < ul.children.length; i++) {
+//   // console.dir(ul.children[i].setAttribute("class", "ul-childs"));
+//   console.log(
+//     (ul.children[i].style.cssText =
+//       "background-color:#222; color:white; list-style:none; padding:5px 5px; text-align:center; margin-bottom:10px;")
+//   );
+// }
+
+let ul = document.querySelector("ul");
+console.log(ul);
+
+function addLanguage(...langName) {
+  console.log(langName);
+  langName.forEach((ele, id) => {
+    let li = document.createElement("li");
+    li.innerText = ele;
+    li.className = `li${id}`;
+    console.log(li);
+    ul.append(li);
+  });
+}
+
+addLanguage("Python", "C", "C++");
+
+let li = document.querySelector("li:nth-child(2)");
+let createLi = document.createElement("li");
+li.replaceWith(createLi);
+createLi.innerText = "Go";
+
+let li1 = ul.firstElementChild;
+li1.outerHTML = "<li>Typescript</li>";
+console.dir(li1);
+
+let liLast = ul.lastElementChild;
+console.log(liLast.remove());
+
+let liSecond = document.querySelector("li:nth-child(2)");
+console.log(liSecond.remove());
