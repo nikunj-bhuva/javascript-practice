@@ -1,5 +1,6 @@
 body {
   background-color: #222;
+  position: relative;
 }
 /*
 #head1 {
@@ -36,7 +37,7 @@ body {
   cursor: pointer;
 } */
 
-body {
+/* body {
   position: relative;
 }
 
@@ -77,4 +78,58 @@ body {
 p
 {
   color: white;
+} */
+
+.box {
+  position: absolute;
+  width: 240px;
+  height: 250px;
+  left: 40%;
+  top: 110px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+#myBtn {
+  position: absolute;
+  width: 90px;
+  height: 32px;
+  left: 40%;
+  top: 360px;
+  background-color: rgb(241, 216, 74);
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  margin-top: 10px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.addTransition {
+  border-radius: 50%;
+  background-color: #f5ee62;
+  transform: scale(1);
+  transform: translateX(0px);
+  transition: all 0.5s linear;
+}
+
+.addTransition1 {
+  border-radius: 50%;
+  background-color: #f5ee62;
+  transform: translateX(200px);
+  transition: all 0.5s linear;
+}
+
+.addTransition2 {
+  border-radius: 50%;
+  background-color: #f5ee62;
+  transition: all 0.5s linear;
+  transform: translateX(-200px);
+}
+
+.addTransition3 {
+  border-radius: 50%;
+  background-color: #f5ee62;
+  transition: all 0.5s linear;
+  transform: translateX(0px);
 }

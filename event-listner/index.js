@@ -38,27 +38,59 @@
 //   box.classList.add("left");
 // });
 
-let input = document.querySelector("input");
-console.log(input);
+// let input = document.querySelector("input");
+// console.log(input);
 
-let keyPress = document.querySelector(".keypress");
-console.log(keyPress);
+// let keyPress = document.querySelector(".keypress");
+// console.log(keyPress);
 
-let keyCode = document.querySelector(".keycode");
-console.log(keyCode);
+// let keyCode = document.querySelector(".keycode");
+// console.log(keyCode);
 
-let charcode = document.querySelector(".charcode");
-console.log(charcode);
+// let charcode = document.querySelector(".charcode");
+// console.log(charcode);
 
-let eventType = document.querySelector(".eventtype");
-console.log(eventType);
+// let eventType = document.querySelector(".eventtype");
+// console.log(eventType);
 
-let handlerEvent = (event) => {
-  keyPress.innerText = keyPress.innerText + " " + event.key;
-  keyCode.innerText = keyCode.innerText + " " + event.code;
-  charcode.innerText = charcode.innerText + " " + event.key.charCodeAt(0);
-  eventType.innerText = eventType.innerText + " " + event.type;
-  console.log(event);
+// let handlerEvent = (event) => {
+//   keyPress.innerText = keyPress.innerText + " " + event.key;
+//   keyCode.innerText = keyCode.innerText + " " + event.code;
+//   charcode.innerText = charcode.innerText + " " + event.key.charCodeAt(0);
+//   eventType.innerText = eventType.innerText + " " + event.type;
+//   console.log(event);
+// };
+
+// input.addEventListener("keyup", handlerEvent);
+
+let myBtn = document.getElementById("myBtn");
+
+let box = document.querySelector(".box");
+
+const handlerBtn = () => {
+  box.style.backgroundColor = " rgb(241, 216, 74)";
 };
 
-input.addEventListener("keyup", handlerEvent);
+const handlerBtn1 = () => {
+  box.classList.add("addTransition");
+};
+
+const handlerBtn2 = () => {
+  box.classList.add("addTransition1");
+};
+
+const handlerBtn3 = () => {
+  box.classList.add("addTransition2");
+};
+
+const handlerBtn4 = () => {
+  box.classList.add("addTransition3");
+};
+
+// event types //
+
+// myBtn.addEventListener("click", handlerBtn);
+myBtn.addEventListener("dblclick", handlerBtn1);
+box.addEventListener("mouseenter", handlerBtn2);
+box.addEventListener("mouseout", handlerBtn3);
+box.addEventListener("mouseup", handlerBtn4);
