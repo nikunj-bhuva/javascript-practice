@@ -1,0 +1,24 @@
+body {
+  position: relative;
+  background-color: #222;
+}
+
+.parent {
+  position: absolute;
+  left: 37%;
+  transform: translate(50%, 50%);
+}
+
+input {
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.paras {
+  background-color: #4b4b4b;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color:rgb(251, 251, 133);
+}
