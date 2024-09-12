@@ -85,3 +85,39 @@
 //   localStorage.removeItem("studentDetail")
 // });
 
+// console.log(localStorage.setItem("users", "nikunj"));
+
+const studentBioData = {
+  firstName: "nikunj",
+  lastName: "bhuva",
+  age: 21,
+  gender: "male",
+  grade: "A+",
+  skills: ["Html5", "css3", "bootstrap5", "javascript", "reactjs", "jquery"],
+  address: {
+    street: "123 main st",
+    city: "amd",
+    state: "gujrat",
+    pincode: "232222",
+  },
+};
+
+let addBtn = document.getElementById("adddata");
+let getBtn = document.getElementById("retrived");
+let removeBtn = document.getElementById("remove");
+
+const handleAddDataLocalStorage = () => {
+  localStorage.setItem("StudentBioData", JSON.stringify(studentBioData));
+};
+
+const handleGetDataLocalStorage = () => {
+  console.log(JSON.parse(localStorage.getItem("StudentBioData")));
+};
+
+const handleRemoveDataLocalStorage = () => {
+  localStorage.removeItem("StudentBioData");
+};
+
+addBtn.addEventListener("click", handleAddDataLocalStorage);
+getBtn.addEventListener("click", handleGetDataLocalStorage);
+removeBtn.addEventListener("click", handleRemoveDataLocalStorage);
