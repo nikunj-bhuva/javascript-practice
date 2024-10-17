@@ -190,7 +190,7 @@
 
 // get day //
 
-// day stats from index number 0 means sunday=0 //
+// day starts from index number 0 means sunday=0 //
 
 // let getDay = date.getDay();
 // console.log(getDay);
@@ -254,4 +254,108 @@
 // console.log(newDate);
 // console.log(newDate.toLocaleDateString());
 
-// write a function  to calculate the difference in days between two given dates //
+// write a function  to calculate the difference in days between two given dates //doubt
+
+// const date1 = new Date("2024-2-19");
+// const date2 = new Date("2024-3-01");
+
+// function getDaysDifference(getDate1, getDate2) {
+
+// }
+
+// console.log(getDaysDifference(date1, date2));
+
+//timing based events //
+
+// settimeout function //
+
+// settimeout function js nu ek in-built function che te call kari apne tayare be arguments pass karvani hoy che jema pehle ek callback function pass karvanu hoy che n biju miliseconds ma time apvano hoy che settime out function tame je milisecond ma time apyo hase tena pachi j te ek var khali te function na block n execute karse ane settimeout ek non-blocking code che //
+
+// let btn = document.getElementById("btn");
+// console.log(btn);
+
+// console.log("hello javascript");
+
+// function showMessage() {
+//   alert("message show after a 3 seconds");
+// }
+
+// btn.addEventListener("click", () => {
+//   setTimeout(showMessage, 3000);
+// });
+
+// setTimeout(showMessage, 3000);
+
+// console.log("this message print before show message");
+
+// console.log("hello");
+
+// setTimeout(() => {
+//   console.log("this message print after 3 seconds");
+// }, 3000);
+
+// for (let i = 0; i <= 100; i++) {
+//   console.log(i);
+// } //doubt che k settimeout to 3 second pachi call thay javu joi ane for loop to 3 second thi pn vadhare samay le che execute thava ma to pn settimeout pchi no code game tetli var lagade e kam puru thay pachi j settimeout tene andar nu callback function execute kare che //
+
+// setinterval function //
+
+// setinterval function ma tame je milisecond api hase te milesecond pachi darvakhte te function na block te te execute karse j ane te repeatedly te function te delay pachi call kartu j jase infinity ni jem. //
+
+// console.log("namaste javascript");
+
+// function repeatedFunction() {
+//   console.log("function will be repeated every 1000 miliseconds");
+// }
+
+// setInterval(repeatedFunction, 1000);
+
+// console.log("bye bye javascript");
+
+// clearing timeout using cleartimeout function //
+
+// syntax //
+//cleartimeout(timeoutId)
+
+// clear timeout function call ma tamare timeout function ni id pass karvani hoy che etle je tame settimeout ma delay apyo hoy ane e function no timeout clear karvo hoy tena mate cleartimeout no use thay che //
+
+// debugger
+
+// let timeOutId = setTimeout(
+//   () => console.log("this function execute after 2 seconds"),
+//   2000
+// );
+// clearTimeout(timeOutId);
+
+// console.log("namaste js");
+
+// let btn = document.getElementById("btn");
+// console.log(btn);
+
+// function showMessage() {
+//   alert("show message after 2 seconds");
+// }
+
+// btn.addEventListener("click", () => {
+//   let timeOutId = setTimeout(showMessage, 2000);
+//   console.log(timeOutId);
+//   clearTimeout(timeOutId);
+// });//clear timeout puchvanu use case teno.
+
+//clear interval same as cleartimeout //
+
+// function repeatedFunction() {
+//   console.log("function will be repeated every 1000 miliseconds");
+// }
+
+// let intervalId = setInterval(repeatedFunction, 1000);
+
+// clearInterval(intervalId);
+
+// function repeatedFunction() {
+//   console.log("function will be repeated every 1000 miliseconds");
+// }
+
+// let interValId = setInterval(repeatedFunction, 1000);
+
+// setTimeout(() => clearInterval(interValId), 5000);
