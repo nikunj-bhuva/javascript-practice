@@ -809,3 +809,246 @@
 // }, 0);
 
 // console.log(totalPrice);
+
+// practice 16-10-2024
+
+// searching array methods //
+
+// let users = ["nikunj", "raju", "karan", "dip", "rahul"];
+// console.log(users.indexOf("dip"));
+
+// index of method //
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 5];
+// console.log(numbers.indexOf(5, 5)); // to arguments first is search array element and second is search element from it index number in given array.
+
+// last index of method //
+
+// this method search element in given array from right to left //
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 4, 8, 9];
+// console.log(numbers.indexOf(4));
+// console.log(numbers.lastIndexOf(4, 6));//argument same as index of method this method searches backword in given array.
+
+// include method of array //
+
+// this method is return boolean value //
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 4, 8, 9, 5];
+// console.log(numbers.includes(7));
+
+// challenge time array //
+
+// 1). Add Dec at the end of an array? //
+// 2). Update march to March in arrat? //
+// 3). Delete june from an array? //
+
+// const months = ["jan", "feb", "march", "jun", "july"];
+// months.splice(months.length, 0, "dec");
+// months[2] = "March";
+// months.splice(months.indexOf("jun"), 1);
+// console.log(months);
+
+// find method //
+
+// this method only return first matching element in a given array it doesn't change original array //
+
+// const numbers = [1, 2, 3, 4, 5, 3, 7, 8, 9, 6];
+
+// let findNumber = numbers.find((element, idx, arr) => {
+//   return element > 5;
+// });
+
+// console.log(findNumber);
+
+// find index method //
+
+// find index je condition match thase array na element sathe te element no index number return kare che tyathi thi array return ny kare findindex method //
+
+// const numbers = [1, 2, 3, 4, 5, 3, 7, 8, 9, 6];
+
+// let findIndexNumber = numbers.findIndex((element) => {
+//   return element === 3;
+// });
+
+// console.log(findIndexNumber);
+
+// filter method //
+
+// filter method array ni andar na har element check karse condition apeli hse tenathi ane je je condition true thase te value ne ek array ma store kri ne navo array create karse.te original array ne change nahi kare.
+
+// const numbers = [1, 2, 3, 4, 5, 3, 7, 8, 9, 6];
+
+// const filterNumbers = numbers.filter((element) => {
+//   return element > 5;
+// });
+
+// console.log(filterNumbers);
+// console.log(numbers);
+
+// ex. let's say user wants to delete 6 in given array //
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 6, 8, 9, 10];
+
+// let updateNumbers = numbers.filter((element) => {
+//   return element !== 6;
+// });
+
+// console.log(updateNumbers);
+
+// Given an array of products where each product has a name and a price, write a function that uses the filter method to return an array containing only the products with a price less than or equal to 500.
+
+// const products = [
+//   { name: "Laptop", price: 1200 },
+//   { name: "Phone", price: 800 },
+//   { name: "Tablet", price: 300 },
+//   { name: "SmartWatch", price: 150 },
+// ];
+
+// const updatedProducts = products.filter((element) => element.price <= 500);
+// console.log(updatedProducts);
+
+// filter unique values //
+
+// const numbers = [1, 2, 3, 4, 6, 5, 6, 7, 8, 9];
+// // console.log(numbers);
+
+// const removeDuplicateValue = numbers.filter(
+//   (element, index, array) => array.indexOf(element) === index
+// );
+
+// console.log(removeDuplicateValue);
+
+// sort method //doubts
+
+// let fruits = ["banna", "apple", "orange", "mango"];//
+// fruits.sort(); //sort method work kem kare puchvanu
+// console.log(fruits);
+
+// let numbers = [1, 3, 6, 9, 8, 7, 2, 5, 4];
+// numbers.sort();
+// console.log(numbers);
+
+// what is asending desending order //
+
+// let numbers = [1, 3, 6, 9, 8, 7, 2, 5, 4];
+// let sortedNumbers = numbers.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (b > a) return -1;
+// });
+// console.log(sortedNumbers);//doubt
+
+// questions //
+
+//1).using the map method, write a function that takes an array of strings and returns a new array where each string is capitalized.
+
+// let users = ["nikunj", "kirti", "ajay", "ram", "raj"];
+
+// let capitalizeStringArr = users.map((element) => element.toUpperCase());
+// console.log(capitalizeStringArr);
+
+//2).using map to square each number and create a new array
+
+// let numbers = [10, 15, 12, 9, 17, 19, 13];
+
+// let squaredNumberArr = numbers.map((element) => element * element);
+// console.log(squaredNumberArr);
+
+//3).using the map method,write a function that takes an array of numbers and returns a new array where each number is squared,but only if it's an even number.
+
+// let numbers = [10, 15, 12, 9, 17, 19, 13, 20, 8, 6];
+
+// let evenNumberSquare = numbers
+//   .map((number) => {
+//     if (number % 2 === 0) {
+//       return number * number;
+//     }
+//   })
+//   .filter((number) => number !== undefined);
+// console.log(evenNumberSquare);
+
+//3).using the map method, write a function that takes an array of names and return a new array where each name is prefixed with "Mr ."//
+
+// let users = ["nikunj", "kirti", "ajay", "ram", "raj"];
+
+// let preFixedNameArr = users.map((user) => `Mr.${user.toUpperCase()}`);
+// console.log(preFixedNameArr);
+
+// reduce method //
+
+// this method return only one value //
+
+//1).write a js function that calculates the total price of items in a shopping cart.the function should take an array of item prices as input and return the total price.
+
+// const productPrice = [100, 200, 300, 400, 500, 600];
+
+// const totalPrice = productPrice.reduce((accum, price) => accum + price, 0);
+
+// console.log(totalPrice);
+
+// practice 17/10/24 //
+
+// jo array data type n string data type ma change karvo hoy to join method no use thay che //
+
+// let number = [1, 2, 3, 4, 5];
+// console.log(number.join());
+// console.log(number);
+
+// slice method //
+
+// slice method doesn't change original array //
+
+// let users = ["nikunj", "kirti", "ajay", "ram", "raj"];
+
+// let myn1 = users.slice(0, 3);
+// console.log(myn1);
+
+// splice method change original array //
+
+// let myn2 = users.splice(2);
+// console.log(myn2);
+// console.log(users);
+
+// let number = [1, 2, 3];
+// let number1 = [4, 5, 6];
+
+// concat method //
+
+// concat array original array ne change nathi karto jo tamare be array n merge karva hoy tena mate concat method no use thay che ane concat method ek navo bane array ne merge kari n navo array return kare che. in this avoid this method because this is old. //
+
+// let mergeArr = number.concat(number1);
+// console.log(mergeArr);
+
+// now you want to merge two array you use this spread operator syntax (...) this syntax merge two array. you can add multiple items in one array //
+
+// let number = [1, 2, 3];
+// let number1 = [4, 5, 6];
+
+// let allNumbers = [...number, ...number1, 7, 8, 9];
+// console.log(allNumbers);
+
+// let anotherArray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
+
+// flat method //
+
+// flat method thi jo tamare pase nested array hoy ene tamare jo single array ma convert karvu hoy to tena mate flat no use thay che flat function ni andar tamare depth nakhvani hoy che k ketli depth sudhi slove karvu che tamare infinity nakho jo tema to te tene rite jetli depth hase te solve kari nakhse //
+
+// console.log(anotherArray.flat(Infinity));
+
+// is array method jo tamare gme te data type hoy te tamare jo question puchvo hoy array che k ny te data type to tena mate is array method no use thay che te boolean value return kare che jo array hase to true apse baki gme te data type hase to false apse //
+
+// console.log(Array.isArray([null]));
+
+// from method //
+
+// from method jo tamare game te data type hoy tene array ma convert karvi hoy to tena mate from method no use thay che //
+
+// console.log(Array.from("nikunj"));
+// console.log(Array.from({ name: "nikunj" })); //object n directly te array ma convert nahi kare important.//
+
+// of method jo tamare pase multiple variables hoy ane tene tamare array ni andar store karva hoy to tena mate of method use thay che //
+
+// let name = "nikunj";
+// let name2 = "karan";
+// let name3 = "sharman";
+// console.log(Array.of(name, name2, name3));
