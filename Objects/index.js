@@ -705,4 +705,92 @@
 //   image: "image link added",
 // };
 
-// new practices //
+// new practices 19-10-2024 //
+
+// singleton object
+
+// je object object na constructor method thi banavo Object.create()thi to tene singleton object kehvay che //
+
+// Object.create
+
+// non-singleton object //
+
+// je object tame object literals thi create karo cho te badha non-singleton object hoy che means {} //
+
+// jo tamare object properties n koy change na kari sake tem karvu hoy to Object.freeze(person). je object ni properties ni tamare change na karvi hoy tene freeze function ni andar pass kari devanu //
+
+// const person = {
+//   name: "Nikunj",
+//   lastName: "Bhuva",
+//   email: "example@gmail.com",
+//   password: 8888,
+// };
+
+// Object.freeze(person);
+// person.email = "llm@gmail.com";
+// console.log(person);
+
+// let obj1 = { 1: "a", 2: "b" };
+// let obj2 = { 3: "c", 4: "d" };
+
+// combine two objects using spread operator //
+
+// let obj3 = { ...obj1, ...obj2 };
+
+// combine two objects using object.assign method //
+
+// let obj3 = Object.assign({}, obj1, obj2);
+
+// console.log(obj3);
+// console.log(obj1);
+// console.log(obj2);
+
+// const person = {
+//   name: "Nikunj",
+//   lastName: "Bhuva",
+//   email: "example@gmail.com",
+//   password: 8888,
+// };
+
+// object ni under ni badhi keys joti hoy tena mate object.keys() method no use thay che //
+
+// object badhi keys ne array ma store kari ane return kare che //
+
+// console.log(Object.keys(person));
+// console.log(Object.values(person));
+
+// object ni andar apne check karvu hoy k apne apeli property che k ny te object ma tena mate Object.hasOwnProperty()no use thay che //
+
+// const person = {
+//   name: "Nikunj",
+//   lastName: "Bhuva",
+//   email: "example@gmail.com",
+//   password: 8888,
+// };
+
+// console.log(person.hasOwnProperty(`password`));
+
+// let product = {
+//   id: 1,
+//   productName: "T.V",
+//   modal: "BPL",
+//   launchDate: 2021,
+// };
+
+// avoid this code to access object keys //
+
+// console.log(product.id);
+// console.log(product.productName);
+// console.log(product.modal);
+// console.log(product.launchDate);
+
+// destructure object keys this syntax is best way to redable your code //
+
+// tame tamara object ni key ne change pn kare sako cho ex:-id:Id aa syntax thi tame object ne destructure kari ne tamara code n redable banavi sako cho darvakhte product. product. lakhva karta apne tene key ne direct access kari sakiye che aa syntax thi. //
+
+// const { id, productName: pName, modal, launchDate } = product;
+
+// console.log(id);
+// console.log(pName);
+// console.log(modal);
+// console.log(launchDate);
