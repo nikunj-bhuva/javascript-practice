@@ -1,396 +1,3 @@
-// let name="user"
-
-// let student = {
-//   name: "nikunj",
-//   std: 10,
-//   rollno: 44,
-//   result: "pass",
-//   greet: function () {
-//     console.log(`hello my ${name} is ${student.name} `);
-//   },
-// };
-
-// console.log(student.rollno);
-// console.log(student["rollno"]);
-
-// student.city = "jamnagar";
-// console.log(student);
-
-// student["rollno"] = 7;
-// console.log(student);
-
-// student.greet();
-
-// let idType = "studentId";
-
-// let student = {
-//   [idType]: "A123456",
-//   sName: "nikunj",
-//   sAge: 29,
-//   isStudent: true,
-//   greet: function () {
-//     console.log(
-//       `Hey,My ${idType} is ${student[idType]} and my name is ${student.sName}`
-//     );
-//   },
-// };
-
-// student.greet();
-
-// let a = 10;
-// let modifyValue = (x) => {
-//  return x = 20;
-// };
-// console.log(modifyValue(a));
-// console.log(a);
-
-// let a = 10;
-// let string = String(a);
-// console.log(string);
-
-// console.log();
-
-// let person = {
-//   name: "nikunj",
-//   surName: "bhuva",
-//   "'age": 21,
-//   graduction: "bca",
-//   address: {
-//     city: "jamnagar",
-//     district: "jamnagar",
-//     state: "gujrat",
-//     pincode: 361001,
-//   },
-//   greet: function () {
-//     console.log("hello");
-//   },
-// };
-// console.log(person.address.pincode);
-// console.log(person["'age"]);
-// person.greet();
-
-// dynamic key adds //
-
-// let grId = "collegeId";
-
-// let student = {
-//   grId: 5556,
-//   sName: "nikunj",
-//   className: "b",
-//   std: 12,
-//   greet: function () {
-//     console.log(
-//       `my ${grId} is ${student["grId"]} and my name is ${student.sName}`
-//     );
-//   },
-// };
-
-// student.greet();
-
-// pass by value //
-
-// let a = 10;
-
-// function modifyValue(x) {
-//   console.log((x = 20));
-// }
-// modifyValue(a);
-// console.log(a);
-
-// pass by refrence //
-
-// let obj = {
-//   name: "nikunj",
-//   age: 21,
-// };
-
-// let obj2 = obj;
-
-// obj2.name = "dip";
-// console.log("obj2:", obj2);
-// console.log("obj1:" + obj);
-
-// object assign //
-
-// let obj = {
-//   name: "nikunj",
-//   age: 21,
-// };
-
-// let newObj = Object.assign({}, obj);
-// newObj.name = "dip";
-// console.log("original object", obj);
-// console.log("new obj", newObj);
-
-// let obj1 = { name: "nikunj", age: 21 };
-// let obj2 = { name: "nikunj", age: 21 };
-
-// let isEqual = obj1 === obj2;
-// console.log(isEqual);
-
-// json //
-
-// let obj = {
-//   name: "nikunj",
-//   surName: "bhuva",
-//   rollNo: 12,
-//   greet: function () {
-//     console.log("hii");
-//   },
-// };
-
-// let jsonString = JSON.stringify(obj);
-// console.log(obj);
-// console.log("json string", jsonString);
-// let jsonParse = JSON.parse(jsonString);
-// console.log("json parse", jsonParse);
-
-"use strict";
-
-// const { object } = require("prop-types");
-
-// let x = 10;
-// console.log(x);
-
-// let define = function () {
-//   console.log("hii");
-// };
-
-// define();
-
-// in a use strict mode this is undefined in function //
-
-// function define() {
-//   console.log(this);
-// }
-
-// define();
-
-// this use in object //
-
-// let obj = {
-//   name: "nikunj",
-//   surName: "bhuva",
-//   greet: function () {
-//     console.log("this object:", this);
-//   },
-// };
-
-// obj.greet();
-// console.log("original object:", obj);
-
-// method shorthand syntax //
-
-// let obj = {
-//   name: "nikunj",
-//   greet() {
-//     console.log(this);
-//   },
-// };
-
-// obj.greet();
-
-// in fat arrow function this refers in object method window object //
-
-// let obj = {
-//   name: "nikunj",
-//   greet: () => {
-//     console.log(this);
-//   },
-// };
-
-// obj.greet();
-
-// access object keys and values method //
-
-// let product = {
-//   id: 1,
-//   name: "Laptop",
-//   category: "Computer",
-//   brand: "ExampleBrand",
-//   price: 999.99,
-//   stock: 50,
-//   description:
-//     "Powerful laptop with a quad-core is processor,8GB RAM,256GB SSD,and a 14-inch FHD display.",
-//   image: "image link added here",
-// };
-
-// all key access of products using obj.keys() method //
-
-// let keys = Object.keys(product);
-// console.log(keys);
-
-// console.log(Object.values(product));
-
-// console.log(Object.entries(product));
-
-// in object this property key contains or not //
-
-// console.log(product.hasOwnProperty("names"));
-
-// let target = { a: 1, b: 3 };
-// let source = { b: 8, c: 6 };
-
-// let mergedObject = Object.assign(target, source);
-
-// source.c = 7;
-
-// console.log(target);
-// console.log(source);
-// console.log(mergedObject);
-
-// let student = {
-//   name: "bob",
-//   age: 20,
-//   grades: {
-//     math: 90,
-//     science: 80,
-//     drawing: 95,
-//   },
-// };
-
-// let addNewSubject = (student, subject, marks) => {
-//   if (student.hasOwnProperty("grades") === true) {
-//     console.log((student.grades[subject] = marks));
-//     console.log(student);
-//   } else {
-//     console.log("grade property is not in a student object");
-//   }
-// };
-
-// addNewSubject(student, "computer", 92);
-
-// let objA = {
-//   name: "Alice",
-//   age: 26,
-//   city: "New York",
-// };
-
-// let objB = {
-//   name: "Alice",
-//   age: 26,
-//   city: "New York",
-// };
-
-// let objAKey = Object.keys(objA);
-// let objBKey = Object.keys(objB);
-// console.log(objAKey);
-// console.log(objBKey);
-
-// objAKey.forEach((ele) => {
-//   console.log(ele);
-// });
-
-// let mySym = Symbol("mykey1");
-
-// let personInformation = {
-//   name: "nikunj",
-//   surName: "bhuva",
-//   [mySym]: "key1",
-//   email: "nikunj@gmail.com",
-//   isLoggedIn: false,
-//   lastLoggin: ["monday", "sunday"],
-// };
-
-// console.log(personInformation.name);
-// console.log(personInformation["surName"]);
-// console.log(personInformation[mySym]);
-// personInformation.email = "nikunjgoogle@gmail.com";
-// console.log(personInformation);
-// // Object.freeze(personInformation);
-// personInformation.email = "nikunjgoogle@gmail123.com";
-// console.log(personInformation);
-
-// personInformation.greet = function () {
-//   console.log("hello i am greet");
-// };
-
-// personInformation.greet2 = function () {
-//   console.log(`hello i am greet2, ${this.name}`);
-// };
-
-// console.log(personInformation.greet2());
-
-// let tinderApp = {};
-
-// tinderApp.name = "nikunj";
-// tinderApp.id = "123abc";
-// tinderApp.password = "1234";
-// tinderApp.email = "nb@gmail.com";
-
-// // console.log(tinderApp);
-
-// tinderApp.fullName = {
-//   userName: {
-//     firstName: "nikunj",
-//     lastName: "bhuva",
-//   },
-// };
-
-// console.log(tinderApp.fullName.userName.lastName);
-
-// let obj1 = {
-//   1: "a",
-//   2: "b",
-// };
-
-// let obj2 = {
-//   3: "a",
-//   4: "b",
-// };
-
-// let obj3 = Object.assign({}, obj1, obj2);
-
-// merage two objects //
-
-// let obj3 = { ...obj1, ...obj2 };
-
-// console.log(obj3);
-
-// let users = [
-//   {
-//     id: 1,
-//     email: "n@gmail.com",
-//   },
-//   {
-//     id: 1,
-//     email: "n@gmail.com",
-//   },
-//   {
-//     id: 1,
-//     email: "n@gmail.com",
-//   },
-// ];
-
-// console.log(Object.keys(users[0]));
-
-// users.forEach((ele) => {
-//   console.log(ele.email);
-// });
-
-// let obj2 = {
-//   3: "a",
-//   4: "b",
-// };
-
-// console.log(Object.keys(obj2));
-// console.log(Object.values(obj2));
-// console.log(obj2.hasOwnProperty("3"));
-
-// destuctring //
-
-// let course = {
-//   courseName: "javascript",
-//   coursePrice: "1000",
-//   courseDuration: "2months",
-// };
-
-// // console.log(course.courseName);
-// // console.log(course.coursePrice);
-
-// let { courseName:name,coursePrice:price,courseDuration:duration } = course;
-// console.log(name);
-
 // practice 19-10-2024 //
 
 // objects in javascript //
@@ -692,7 +299,30 @@
 
 // person.greet();
 
+// const product = {
+//   id: 1,
+//   name: "Laptop",
+//   category: "Computers",
+//   brand: "ExampleBrand",
+//   price: 999.99,
+//   stock: 50,
+//   description: "dummy text",
+//   image: "image link added",
+// };
+
 // object useful methods //
+
+// Object.keys(product) tena thi tame object ni andar ni key access kari sako cho //
+
+// let productObjKeys = Object.keys(product);
+// console.log(productObjKeys);
+
+// Object.values(product) tena thi tame object ni andar key ni value ne access kari sako cho //
+
+// let productKeyValues = Object.values(product);
+// console.log(productKeyValues);
+
+// object ni andar apne check karvu hoy k apne apeli key te object ni andar che k nahi tena mate Object.hasOwnProperty() no use thay che te boolean value return kare che //
 
 // const product = {
 //   id: 1,
@@ -704,6 +334,115 @@
 //   description: "dummy text",
 //   image: "image link added",
 // };
+
+// console.log(product.hasOwnProperty("price"));
+
+// Object.freeze() method tamara jo tamara object ni properties ne koy change na kari sake to tena mate useful method che //
+
+// const product = {
+//   id: 1,
+//   name: "Laptop",
+//   category: "Computers",
+//   brand: "ExampleBrand",
+//   price: 999.99,
+//   stock: 50,
+//   description: "dummy text",
+//   image: "image link added",
+// };
+
+// Object.freeze(product);
+// product.id = 2;
+// console.log(product);
+
+// Interview Questions object //
+
+// 1. what will be the output? //
+
+// output merge karse Object.assign() method tema target ni ane source ni key same hase to te override kari dese old key n jem ke niche na object ma {a:1,b:3,c:4} b key bey object ma same j che etle mergeobject ma b:3 avse //
+
+// const target = { a: 1, b: 2 };
+// const source = { b: 3, c: 4 };
+
+// let mergedObject = Object.assign(target, source);
+// console.log(mergedObject);
+
+// ! problem: Given an object representing a student, write a function to add a new subject with its corresponding grade to the student's record. Also check if the grades property is present or not?
+
+// let student = {
+//   name: "Bob",
+//   age: 20,
+//   grades: {
+//     math: 90,
+//     science: 85,
+//     history: 88,
+//   },
+// };
+
+// const addNewSubject = (studentObj, subject, mark) => {
+//   if (studentObj.hasOwnProperty("grades")) {
+//     studentObj.grades = { ...studentObj.grades, [subject]: mark };
+//     // console.log(studentObj);
+//   }
+// };
+
+// addNewSubject(student, "computer", 92);
+// console.log(student);
+
+//! Problem: write a function that compare two objects to determined if they have the same properties and values.
+
+// Example
+
+// let objA = { name: "Alice", age: 26, city: "New York" };
+// let objB = { name: "Alice", age: 26, city: "New York" };
+// let objC = { name: "Bob", age: 30, city: "San Francisco" };
+
+// let areObjectEqual = (obj1, obj2) => {
+//   let obj1Keys = Object.keys(obj1);
+//   let obj2Keys = Object.keys(obj2);
+
+//   // check object keys obj1 and obj2 //
+
+//   // if (obj1Keys.length !== obj2Keys.length) {
+//   //   return false;
+//   // } else {
+//   //   return true;
+//   // }
+
+//   // check object values obj1 and obj2 //
+
+//   for (let key in obj1) {
+//     if (obj1[key] === obj2[key]) {
+//       return true;
+//     } else {
+//       return false;
+//     } //dot notation no use karso to console ma undefined avse square bracket notation thi j tame key ni value access kari sakso //
+//   }
+// };
+// let objSameOrNot = areObjectEqual(objA, objB);
+// console.log(objSameOrNot);
+// areObjectEqual(objA, objC);
+
+// ! Problem: write a function that transforms an array of an objects into an object where the keys are the objects ids.
+
+// let inputArray = [
+//   { id: 1, name: "Alice" },
+//   { id: 2, name: "Bob" },
+//   { id: 3, name: "Charlie" },
+// ];
+
+// const arrayToObject = (arr) => {
+//   let obj = {};
+
+//   for (let key of arr) {
+//     obj[key.id] = key;
+//   }
+//   return obj;
+// };
+
+// let converTedObject = arrayToObject(inputArray);
+// console.log(converTedObject);
+
+// should output: {`1`:{id: 1, name: "Alice" },`2`:{ id: 2, name: "Bob" },`3`:{ id: 3, name: "Charlie" },}
 
 // new practices 19-10-2024 //
 
