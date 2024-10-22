@@ -338,20 +338,20 @@
 // sum(10, 5);
 // sum(10, 5);
 
-let userInput = prompt("enter your Name:");
+// let userInput = prompt("enter your Name:");
 
-debugger;
-function userLoggedIn(userName = "dev") {
-  debugger;
-  if (userName === "") {
-    return "please enter your userName:";
-  } else {
-    return `${userName} loggin sucessfully`;
-  }
-}
-debugger;
-let logginMessage = userLoggedIn(userInput);
-console.log(logginMessage);
+// debugger;
+// function userLoggedIn(userName = "dev") {
+//   debugger;
+//   if (userName === "") {
+//     return "please enter your userName:";
+//   } else {
+//     return `${userName} loggin sucessfully`;
+//   }
+// }
+// debugger;
+// let logginMessage = userLoggedIn(userInput);
+// console.log(logginMessage);
 
 // debugger;
 // function calculateCartPrices(num1, num2, ...value1) {
@@ -410,3 +410,63 @@ console.log(logginMessage);
 //   console.log(index--);
 //   main.style.backgroundColor = colors[index];
 // });
+
+// new practice 22-10-2024 //
+
+// normal functions //
+
+// function defination //
+
+// function hello() {
+//   console.log("n");
+//   console.log("i");
+//   console.log("k");
+//   console.log("u");
+//   console.log("n");
+//   console.log("j");
+// }
+
+// hello//function refrence
+// hello();//function calling
+
+// add two numbers function //
+
+// let userNumber1 = +prompt("enter your first Number!:");
+// let userNumber2 = +prompt("enter your second Number!:");
+
+// num1 and num2 is parameters //
+
+// function addTwoNumbers(num1, num2) {
+//   return num1 + num2;
+//   // function value ne return kari dese pachi function tenu exection puru kari dese ane return pachi no koy pn code nahi chale //
+//   console.log("this console doesn't work");
+// }
+
+// jo function ni andar return statement nahi hoy ane tame addTwoNumbers fuction ni console karso to return value undefined apse function ane e apna console ma dekhase //
+
+// console.log(addTwoNumbers(userNumber1, userNumber2)); //arguments
+// function addTwoNumbers(num1, num2) {
+//   if (num1 === 0 && num2 === 0) {
+//     alert("please enter your Numbers!");
+//   } else {
+//     return num1 + num2;
+//   }
+// }
+
+// let result = addTwoNumbers(userNumber1, userNumber2);
+// console.log("result:", result);
+
+// isLoggedIn function defination //
+
+// let userName = prompt("enter your userName!");
+
+// function isLoggedIn(name) {
+//   if (!name) {
+//     alert("please enter your userName");
+//   } else {
+//     return `welcome ${name} logged in successfully`;
+//   }
+// }
+
+// let successFullLogin = isLoggedIn(userName);
+// console.log(successFullLogin);
