@@ -470,3 +470,33 @@
 
 // let successFullLogin = isLoggedIn(userName);
 // console.log(successFullLogin);
+
+// practice 22-10-2024 //
+
+// rest operators in function parameters //
+
+// jo tame function arguments ma multiple value pass karo ane function ek j parameter thi array ni andar store karva hoy to ...rest operator no use thay che //
+
+// function calculateCartPrice(...num1) {
+//   // calculate prices //
+//   return num1.reduce((accum, price) => accum + price, 0);
+//   // return num1; //[200,300,400,500,600]
+// }
+
+// console.log("total price is:", calculateCartPrice(200, 300, 400, 500, 600));
+
+// let user = {
+//   firstName: "Nikunj",
+//   lastName: "Bhuva",
+// };
+
+// function userLogginMessage(anyObj) {
+//   if (user.hasOwnProperty("firstName") && user.hasOwnProperty("lastName")) {
+//     return `your first name is ${anyObj.firstName} your last name is ${anyObj.lastName}`;
+//   } else {
+//     return false;
+//   }
+// }
+
+// let logginMessage = userLogginMessage(user);
+// console.log(logginMessage);
