@@ -2,7 +2,7 @@
 
 // objects in javascript //
 
-//object ek way che jo tamari pase multiple data types no data hoy tene tamare single variable ni andar rakhvo hoy to tena mate object no use thay che tame object ma game te data type ne store kari sako che function k object ni andar object ne pan store kari sako cho object no data key ane value pairs ma hoy che jema object ni har ek key string hoy che ane teni value game te data type ni hoy sake che object properties ane method pn store kari sake che key ane value bane ne properties kehvay che //
+//object ek way che jo tamari pase multiple data types no data hoy tene tamare single variable ni andar rakhvo hoy to tena mate object no use thay che tame object ma game te data type ne store kari sako cho function k object ni andar object ne pan store kari sako cho object no data key ane value pairs ma hoy che jema object ni har ek key string hoy che ane teni value game te data type ni hoy sake che object properties ane method pn store kari sake che key ane value bane ne properties kehvay che //
 
 // create object in javascript //
 
@@ -127,7 +127,7 @@
 // console.log(idType);
 
 // let student = {
-//   [idType]: "A123456",
+//   idType: "A123456",
 //   sName: "Nikunj",
 //   sAge: 22,
 //   isStudent: true,
@@ -165,7 +165,7 @@
 
 // let a = 10;
 // function modifyValue(x) {
-//   return (x = 20);
+// return (x = 20);
 // }
 // let modify = modifyValue(a);
 // console.log(modify); //value a ni modify thay gay che 20
@@ -220,9 +220,9 @@
 // let obj1 = { name: "nikunj" };
 // let obj2 = { name: "nikunj" };
 
-// // tema else vado code chalse karan k obj1 and obj2 na memory address alag alag che etle jo tame obj2 ni andar obj1 assign karso to true avse karan ke tame obj1 nu memory address obj2 ma store karo cho pachi jo tame comparison karso to true avse //
+// // // tema else vado code chalse karan k obj1 and obj2 na memory address alag alag che etle jo tame obj2 ni andar obj1 assign karso to true avse karan ke tame obj1 nu memory address obj2 ma store karo cho pachi jo tame comparison karso to true avse //
 
-// if (obj1 === obj2) {
+// if (obj1 == obj2) {
 //   console.log("true");
 // } else {
 //   console.log("false");
@@ -533,3 +533,247 @@
 // console.log(pName);
 // console.log(modal);
 // console.log(launchDate);
+
+// practice 13/11/2024 //
+
+// how to create objects in js //
+
+// create object using Object constructor //
+
+// let obj = new Object();
+// console.log(obj);
+
+// create object using object literals //
+
+// let obj = {
+//   name: "kishan",
+//   grId: 2334,
+//   location: "rajkot",
+//   isStudent: true,
+// };
+
+// get key values from obj using dot notation //
+
+// console.log(obj.location);
+// console.log(obj.isStudent);
+// console.log(obj.name);
+
+// add properties and methods into obj //
+
+// obj.surName = "kumar";
+// obj.age = 26;
+
+// modify object key values //
+
+// obj.name = "kishor";
+// obj.grId = 8884;
+// obj.age = 25;
+// console.log(obj);
+
+// let person = {
+//   name: "amitabh",
+//   surName: "bachan",
+//   age: 70,
+//   profession: "actor",
+//   city: "Mumbai",
+//   greet: function () {
+//     console.log(`Hello Good Afternoon!`);
+//   },
+// };
+
+// console.log(person.greet());
+
+// let student = {
+//   name: "rahul",
+//   surName: "sheth",
+//   rollNo: 7,
+//   standard: 12,
+// };
+
+// student.greet = function () {
+//   console.log(
+//     `hello my name is ${student.name}. my surname is ${student.surName}`
+//   );
+// };
+// console.log(student);
+// console.log(student.greet());
+
+// this keyword //
+
+// object ni andar method ma jo tame this lakhso to te current object apse means je object hase teno te apse this keyword thi tame current object ni properties dynamically get kari sako cho //
+
+// let student = {
+//   name: "rahul",
+//   surName: "sheth",
+//   rollNo: 7,
+//   standard: 12,
+//   // short hand syntax method //
+//   greet: function () {
+//     console.log(this.name, this.surName);
+//   },
+// };
+
+// console.log(student.greet());
+
+// let student = {
+//   name: "rahul",
+//   surName: "sheth",
+//   rollNo: 7,
+//   standard: 12,
+//   // short hand syntax method //
+//   greet: () => {
+//     console.log(this.name, this.surName); // arrow function ni andar this global object ne refer kare che te current object nathi aptu te global object means window object apse //
+//   },
+// };
+
+// console.log(student.greet());
+
+// let obj1 = { name: "nikunj" };
+// let obj2 = { name: "nikunj" };
+
+// if (obj1 === obj2) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// aanu result false avse karan k javascript ma object che te non-primitive type che tema tame object create karo etle javascript har ek object ne different memory address uper store kare che tethi tame jayre comparison karo cho tayre js obj1 ane obj2 nu memory address check kare che bane ma alag alag object create thaya che tethi banena memory address alag alag hoy che tethi result false made che //
+
+// let obj1 = { name: "nikunj" };
+// let obj2 = obj1;
+
+// if (obj1 === obj2) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// aanu result true avse karan k obj1 thi tame object create karyo etle tenu memory address memory ma store thase ane obj2 ni andar tame obj1 assign karyu etle tame obj1 no refernce memory mathi send karyu etle obj1 ane obj2 bananu memory address same thay jase means obj1 memory location(0x001) ane obj2 nu pn memory location (0x001) bane same thay jase tethi tenu result true avse //
+
+// let obj1 = { name: "nikunj", surName: "bhuva" };
+// let obj2 = obj1;
+// obj2.name = "kunal";
+// obj2.surName = "shastri";
+// obj2.rollNo = 25;
+// console.log("this is obj2:", obj2);
+// console.log("this is obj1:", obj1);
+
+// aama jayre hu obj2 ni properties ne change karu chu to obj1 ni properties pn change thay jay che karan k js ma object reference type hoy che example obj2 ma obj1 assign che etle obj2 ane obj1 banenu memory address same location uper che ane object pn same che bane pase tethi hu jayre obj2 ne change karis to obj1 ni properties pn change thay jase //
+
+// let userDetail = { name: "nikunj", surName: "bhuva" };
+// let userDetail2 = { isLoggedIn: true, location: "ahmedabad" };
+// let fullDetail = Object.assign({}, userDetail, userDetail2);
+// fullDetail.isLoggedIn = false;
+// console.log("user detail:", userDetail);
+// console.log("user detail 2:", userDetail2);
+// console.log("full detail:", fullDetail);
+
+// object assign method //
+
+// let objA = { a: 1, b: 2 }; //0x1F34 memory address
+// let objB = { c: 3, d: 4 }; //0x1F35 memory address
+// let mergedObject = Object.assign({}, objA, objB); // 0x1F36 memory address
+// // object.assign()method ma be arguments apvani hoy che first target object {} je ek empty object hoy che ane objA ni properties copy kare che assign method ane objB ni properties copy kari n target object ma store kare che objA ane objB bane object ek target object ma merge kari n ek navo object return kare che {a:1,b:2,c:3,d:4}
+// console.log(mergedObject);
+
+// spread operator //
+
+// let objA = { a: 1, b: 2 };
+// let objB = { c: 3, d: 4 };
+// let mergedObject = { ...objA, ...objB };
+// console.log(mergedObject);
+
+// JSON Javascript Object Notation //
+
+// JSON Provides two method like 1).JSON.Stringify() 2).JSON.Parse() //
+
+// JSON.Stringify methods converts  javascript object into a string //
+
+// const product = {
+//   id: 1,
+//   name: "Laptop",
+//   category: "Computers",
+//   brand: "ExampleBrand",
+//   price: 999.99,
+//   stock: 50,
+//   description: "dummy text",
+//   image: "image link added",
+// };
+
+// // converts js objects into json string //
+
+// let jsonData = JSON.stringify(product);
+// console.log(jsonData);
+
+// // get json string into original js object //
+
+// let getJsonData = JSON.parse(jsonData);
+// console.log(getJsonData);
+
+// object usefull methods //
+
+// Object.keys method //
+
+// const product = {
+//   id: 1,
+//   name: "Laptop",
+//   category: "Computers",
+//   brand: "ExampleBrand",
+//   price: 999.99,
+//   stock: 50,
+//   description: "dummy text",
+//   image: "image link added",
+// };
+
+// object.keys object ni keys [] array ma convert kari ane return kare che //
+
+// let productObjKeys = Object.keys(product);
+// console.log(productObjKeys);
+
+// object.values object ni andar ni key ni badhi values ek [] array na form ma store kari ne return kare che //
+
+// let productObjValues = Object.values(product);
+// console.log(productObjValues);
+
+// hasOwnProperty method thi tame object ni andar search kari sako tema key pass karvani jo tame apeli key tema exists karti hase to te boolean value true return karse ane jo key exists nahi karti hoy to boolean value false return karse //
+
+// console.log(product.hasOwnProperty("price"));
+
+// object.freeze method //
+
+// object ni freeze kri deje jethi apna object ni properties ne koy change na kari sake tena mate use thay che //
+
+// Object.freeze(product);
+// product.id = 8888; //doesn't change because the object is freeze using freeze method //
+// product.brand = "mobile"; //doesn't change because the object is freeze using freeze method //
+// console.log(product); //doesn't change properties //
+
+// practice question //
+
+// let target = { a: 1, b: 2 };
+// let source = { b: 3, c: 4 };
+// let mergedObject = Object.assign({}, target, source);
+// console.log(mergedObject);
+
+// doubt //
+
+// let student = {
+//   name: "Bob",
+//   age: 20,
+//   grades: {
+//     math: 90,
+//     science: 85,
+//     history: 88,
+//   },
+// };
+
+// let addStudentGrade = (studentObj, sub, grade) => {
+//   if (studentObj.hasOwnProperty("grades")) {
+//     let newObj = JSON.parse(JSON.stringify(studentObj));
+//     newObj.grades[sub] = grade;
+//     return newObj;
+//   }
+// };
+// let addSubObj = addStudentGrade(student, "computer", 92);
+// console.log(addSubObj);
+
