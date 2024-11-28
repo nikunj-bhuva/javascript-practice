@@ -767,13 +767,137 @@
 //   },
 // };
 
-// let addStudentGrade = (studentObj, sub, grade) => {
+// let addNewSubject = (studentObj, sub, mark) => {
 //   if (studentObj.hasOwnProperty("grades")) {
-//     let newObj = JSON.parse(JSON.stringify(studentObj));
-//     newObj.grades[sub] = grade;
-//     return newObj;
+//     let newStudentObj = Object.assign({}, studentObj);
+//     newStudentObj.grades[sub] = mark;
+//     return newStudentObj;
+//   } else {
+//     return false;
 //   }
 // };
-// let addSubObj = addStudentGrade(student, "computer", 92);
-// console.log(addSubObj);
 
+// let studentFinalObject = addNewSubject(student, "computer", 92);
+// console.log(studentFinalObject);
+
+// let objA = { name: "Alice", age: 26, city: "New York" };
+// let objB = { name: "Alice", age: 26, city: "New York" };
+// let objC = { name: "Bob", age: 30, city: "San Francisco" };
+
+// const areObjectEqual = (obj1, obj2) => {
+//   let obj1Keys = Object.keys(obj1);
+//   let obj2Keys = Object.keys(obj2);
+
+//   if (obj1Keys.length !== obj2Keys.length) {
+//     return false;
+//   }
+
+//   for (let key in obj1) {
+//     if (obj1[key] !== obj2[key]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// let finalResult = areObjectEqual(objA, objB);
+// let finalResult2 = areObjectEqual(objA, objC);
+// console.log(finalResult);
+// console.log(finalResult2);
+
+// let inputArray = [
+//   { id: 1, name: "Alice" },
+//   { id: 2, name: "Bob" },
+//   { id: 3, name: "Charlie" },
+// ];
+
+// let arrayToObject = (arr) => {
+//   let obj = {};
+//   for (let index of arr) {
+//     obj[index.id] = index;
+//   }
+//   return obj;
+// };
+
+// let newObj = arrayToObject(inputArray);
+// console.log(newObj);
+
+// object literals //
+
+// symbol declare into object key //
+
+// let mySym = Symbol("mykey1");
+
+// let jsUser = {
+//   name: "nikunj",
+//   "full name": "nikunj bhuva",
+//   [mySym]: "key1",
+//   age: 22,
+//   location: "ahmedabad",
+//   grId: 5556,
+//   isLoggedIn: true,
+//   lastOnline: ["monday", "tuesday", "wednesday", "friday"],
+// };
+
+// access properties from object using dot notation //
+
+// console.log(jsUser.grId);
+
+// access properties from object using bracket notation //
+
+// console.log(jsUser["full name"]);
+// console.log(jsUser[mySym]);
+// console.log(jsUser);
+// console.log(jsUser["location"]);
+
+// add properties & methods into an object //
+
+// method che ek tena thi object ne koy pn properties ne change na kari sake //
+
+// Object.freeze(jsUser);
+
+// jsUser.grettings = function () {
+//   console.log("Hello Js User");
+// };
+
+// // console.log(jsUser.grettings());
+// jsUser.name = "keyur";
+// console.log(jsUser);
+
+// merge to objects //
+
+// const obj1 = { 1: "a", 2: "b" };
+// const obj2 = { 3: "c", 4: "d" };
+
+// // merge to objects using object.assign method //
+
+// // const obj3 = Object.assign({}, obj1, obj2);
+// // console.log(obj3);
+
+// // merge objects using spread operator //
+
+// const obj3 = { ...obj1, ...obj2 };
+// console.log(obj3);
+
+let myObj = {
+  name: "nikunj",
+  id: 2,
+  location: "jamnagar",
+  profession: "study",
+  "birth-of-date": 2002,
+};
+
+// avoid this code to access properties //
+
+// console.log(myObj.location);
+// console.log(myObj.name);
+// console.log(myObj.profession);
+
+// destructring objects properties //
+
+let { name, id, profession, location, "birth-of-date": bithOfDate } = myObj;
+console.log(name);
+console.log(id);
+console.log(profession);
+console.log(location);
+console.log(bithOfDate);
