@@ -1052,3 +1052,108 @@
 // let name2 = "karan";
 // let name3 = "sharman";
 // console.log(Array.of(name, name2, name3));
+
+// practice 29-11-2024 //
+
+// create array using array literals //
+
+// let arr = [0, 1, 2, 3, 4, 5];
+// console.log(arr[arr.length - 1]);
+
+// array method //
+
+// let users = ["nikunj", "dip"];
+
+// add elements into the array //
+
+// push method add elements last into the array and returns new length of the array this method mutates the original array //
+
+// users.push("keyur");
+// users.push("rahul");
+
+// pop method delete last elements into the given array and this method returned deleted elements and it mutates the original array //
+
+// users.pop();
+// console.log(users);
+
+// unshift method add elements in start of the array and return new length of the array and it mutates the original array //
+
+// console.log(users.unshift("keyur"));
+// console.log(users.unshift("rahul"));
+
+// shift method delete elements start of the array and return it elements and it mutates the original array //
+
+// console.log(users.shift());
+// console.log(users);
+
+// search method //
+
+// let persons = ["nikunj", "nikhil", "kishan", "ram", "raju", "raja", "ram"];
+
+// include method return a boolean value this method search given element in array this element is find in the array it return true the element doesn't exists into the array it returns false //
+
+// console.log(persons.includes("ram"));
+// console.log(persons.includes("nikhil"));
+
+// indexof method ma tame je element pass karo cho teno index number tamne return kare che tema be arguments hoy che pehle search element and second from index kaya index thi search karvanu nu suru karvu che tema tame negative index thi pn search karvanu nu chalu kari sako cho //
+
+// console.log(persons.indexOf("ram", 4));
+// console.log(persons.lastIndexOf("ram"));
+
+// join method tamara array na har ek elements ne comma api badha ne ane array mathi string data type ma convert kari de che it doesn't mutates the original array //
+
+// let persons = ["nikunj", "nikhil", "kishan", "ram", "raju", "raja", "ram"];
+// let newPersons = persons.join();
+// console.log(newPersons);
+
+// slice method original array ne change nathi kartu ane tema two arguments hoy che start index and end index //
+
+// let fruits = ["apple", "mango", "orange", "pineapple", "banna"];
+// console.log("before slice:", fruits);
+// let fruits1 = fruits.slice(1, 4);
+// console.log("fruits1:", fruits1);
+// console.log("after slice:", fruits);
+
+// splice method //
+
+// let fruits2 = fruits.splice(1, 3);
+// console.log("fruits2:", fruits2);
+// console.log("after splice:", fruits);
+
+// let dc_heroes = ["thor", "ironman", "spiderman"];
+// let marvel_heroes = ["superman", "flash", "batman"];
+
+// dc_heroes.push(marvel_heroes);
+// console.log(dc_heroes[3]);
+
+// concat method //
+
+// let mergedArr = dc_heroes.concat(marvel_heroes);
+// console.log(mergedArr);
+// console.log(dc_heroes);
+
+// spread operator //
+
+// let all_heroes = [...dc_heroes, ...marvel_heroes];
+// console.log(all_heroes);
+
+// let nestedArray = [1, 2, 3, [4, 5, 6], 7, [8, 9], [10, 11, 12]];
+// let removeNesting = nestedArray.flat(Infinity);
+// console.log(removeNesting);
+// console.log(nestedArray);
+
+// isArray method //
+
+// console.log(Array.isArray("nikunj"));
+
+// let convertArr = Array.from("nikunj");
+// console.log(convertArr);
+
+// console.log(Array.from({ name: "nikunj" }));// tamare kevu pade k keys no array banavo che k value no te natar [] array return karse //
+
+// let score = 100;
+// let score2 = 200;
+// let score3 = 300;
+
+// let array = Array.of(score, score2, score3);
+// console.log(array);
