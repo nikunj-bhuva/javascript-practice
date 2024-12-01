@@ -1,40 +1,53 @@
-// let users = {
+// practice 1-12-2024 //
+
+// debugger;
+// let user = {
 //   userName: "nikunj",
-//   userPassword: 1234,
-//   grId: 5556,
-//   method: function () {
-//     // return `Hello ${this.userName} welcome to our website`;
-//     console.log(this);
+//   price: 799,
+//   welcomeMessage: function () {
+//     debugger;
+//     // console.log(`Hello ${this.userName} Welcome To Website`);
+//     console.log(this);//object ni andar this lakhso to te current context ne refer karse means current context object che etle te user object apse //
 //   },
 // };
 
-// // console.log(users.method());
-// // users.userName = "dip";
-// // console.log(users.method());
+// user.welcomeMessage();
 
-// users.method();
+// console.log(this);// node js ni andar tame this ni refrence karso to te ek {} empty object return karse //
 
-// this in function //
-
-// function myThisKeyword() {
-//   let userName="nikunj";
-//   console.log(this.userName);
+// function myFun() {
+//   console.log("hello this");
+//   console.log(this); // function andar this lakhso to node js ma global object avse te alag hase browser karta.
 // }
 
-// myThisKeyword();
+// myFun();
 
-// this use in arrow function //
+// arrow function //
 
-// const arrow = () => {
-//   let userName = "nikunj";
-//   console.log("this is arrow function", this.userName);
+// const myArrowFun = () => {
+//   console.log(this); // arrow function ni andar this lakso to te node js ma empty object avse ane jo aa j function browser ma run karvso to te window object j apse //
 // };
 
-// arrow();
+// myArrowFun();
 
-// use syntax in react  to return object //
+// debugger;
+// const addTwo = (num1, num2) => {
+//   // debugger;
+//   return num1 + num2;
+// };
 
-// let arrow = () => ({ userName: "nikunj", surName: "bhuva" });
+// let result = addTwo(10, 20);
+// console.log(result);
 
-// console.log(arrow());
+// implicit return //
+
+// const addTwo = (num1, num2) => num1 + num2;
+
+// console.log(addTwo(10, 20));
+
+// arrow function ma jo tamare ek j line ma obj ma return keyword vagar obj return karvo hoy to tena mate () curly brackets no use karvo pade. //
+
+// const funObj = () => ({ userName: "nikunj" });
+
+// console.log(funObj());
 
