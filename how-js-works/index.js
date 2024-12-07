@@ -1,31 +1,52 @@
-// // javascript na ast tree n check karva mate ni website "https://www.jointjs.com/demos/abstract-syntax-tree" //
+// // synchronus code example //
 
-// // synchronus code exapmle and execution //
+// function two() {
+//   console.log("this is function two");
+// }
 
-// const fun2 = () => {
-//   console.log("fun2 starts and ends");
-// };
+// function one() {
+//   console.log("this is function one");
+//   two();
+//   console.log("function 1 is end");
+// }
 
-// const fun1 = () => {
-//   console.log("fun1 is start");
-//   fun2();
-//   console.log("fun1 ends");
-// };
+// one();
 
-// fun1();
+// asynchronus code example //
 
-// asynchronus code example and execution //
+// function two() {
+//   setTimeout(() => {
+//     console.log("fun 2 is starting");
+//   }, 2000);
+// }
 
-const fun2 = () => {
+// function one() {
+//   console.log("fun 1 start");
+//   two();
+//   console.log("fun 1 ended");
+// }
+
+// one();
+
+// debugger;
+function firstFunction() {
+  // debugger;
+  console.log("first function");
+  secondFunction();
+}
+
+function secondFunction() {
+  // debugger;
+  console.log("second function");
   setTimeout(() => {
-    console.log("fun 2 starts and ends");
+    console.log("fun 2 is starting");
   }, 2000);
-};
+  thirdFunction();
+}
 
-const fun1 = () => {
-  console.log("fun1 is start");
-  fun2();
-  console.log("fun1 ends");
-};
+function thirdFunction() {
+  // debugger;
+  console.log("third function");
+}
 
-fun1(); 
+firstFunction();
